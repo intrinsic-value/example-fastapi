@@ -14,7 +14,6 @@ from . import models
 from .database import engine
 from .routers import post, user, auth, vote
 
-from marlon_practice.app import database
 
 # alembic 可以替代这个部分
 # models.Base.metadata.create_all(bind=engine)
@@ -70,7 +69,7 @@ while True:
 # 路径操作
 @app.get("/")  # 根目录就会有反应
 def root():
-    return {"message": "welcome to my api!!!!!"}
+    return {"message": "welcome to my fastapi-new"}
 
 
 if __name__ == "__main__":
