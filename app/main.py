@@ -69,7 +69,7 @@ while True:
 # 路径操作
 @app.get("/")  # 根目录就会有反应
 def root():
-    return {"message": "welcome to my fastapi-new"}
+    return {"message": "welcome to my fastapi-new!!!!!! version 2"}
 
 
 if __name__ == "__main__":
