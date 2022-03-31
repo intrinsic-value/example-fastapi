@@ -13,6 +13,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from . import models
 from .database import engine
 from .routers import post, user, auth, vote
+from fastapi import status
 
 
 # alembic 可以替代这个部分
@@ -67,9 +68,9 @@ while True:
 
 
 # 路径操作
-@app.get("/")  # 根目录就会有反应
+@app.get("/", status_code=status.HTTP_201_CREATED)  # 根目录就会有反应
 def root():
-    return {"message": "bind mount works"}
+    return {"message": "Hello World"}
 
 
 if __name__ == "__main__":
